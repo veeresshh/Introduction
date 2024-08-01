@@ -16,32 +16,27 @@ public class SeleniumH {
 
 		Driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-
 		Driver.get("https://www.flipkart.com/");
 		Thread.sleep(3000);
-		
+
 		WebElement Move = Driver.findElement(By.xpath("(//a[@title='Login'])[1]"));
-		
-		WebElement EnterCaps =Driver.findElement(By.xpath("//input[@title='Search for Products, Brands and More']"));
-		
-		//Create action Class
+
+		WebElement EnterCaps = Driver.findElement(By.xpath("//input[@title='Search for Products, Brands and More']"));
+
+		// Create action Class
 		Actions a = new Actions(Driver);
-		
-		//Moves to Specific Element
-		
-		
-		
-		//Enter Caps		
+
+		// Moves to Specific Element
+
+		// Enter Caps
 		a.moveToElement(EnterCaps).click().keyDown(Keys.SHIFT).sendKeys("mobile").doubleClick().build().perform();
-		
+
 		Thread.sleep(3000);
-		
-		
-		//Double Click	
+
+		// Double Click
 		a.moveToElement(Move).contextClick().build().perform();
-		
+
 		Thread.sleep(3000);
-		
-	
+
 	}
 }

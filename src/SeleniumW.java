@@ -14,23 +14,24 @@ public class SeleniumW {
 		WebDriver Driver = new ChromeDriver();
 		Driver.manage().window().maximize();
 		Driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		
+
 		Driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
 		Thread.sleep(3000);
-		
-		//To Search and Validate Search Results are Correct
-		
-		//Search Rice
+
+		// To Search and Validate Search Results are Correct
+
+		// Search Rice
 		Driver.findElement(By.id("search-field")).sendKeys("Rice");
-		
-		//Collect Rice after you search for Rice
+
+		// Collect Rice after you search for Rice
 		List<WebElement> VegetableList = Driver.findElements(By.xpath("//tr/td[1]"));
-		
-		//Collect Rice from the Table
-		List<WebElement> FilteredVegetableList = VegetableList.stream().filter(Vegetables->Vegetables.getText().contains("Rice")).collect(Collectors.toList());
-		
+
+		// Collect Rice from the Table
+		List<WebElement> FilteredVegetableList = VegetableList.stream()
+				.filter(Vegetables -> Vegetables.getText().contains("Rice")).collect(Collectors.toList());
+
 		Assert.assertEquals(FilteredVegetableList.size(), VegetableList.size());
-		
+
 	}
 
 }

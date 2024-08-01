@@ -24,7 +24,8 @@ public class SeleniumEC {
 		//// div[@id="glsctl00_mainContent_ddl_originStation1_CTNR"]//a[@value="BLR"] -
 		//// Parent Child Xpath
 		Thread.sleep(2000);
-		System.out.println(Driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).getAttribute("value"));
+		System.out
+				.println(Driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).getAttribute("value"));
 
 		Driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT")).click();
 		Thread.sleep(2000);
@@ -32,7 +33,8 @@ public class SeleniumEC {
 		//// div[@id="glsctl00_mainContent_ddl_destinationStation1_CTNR"]//a[@value="MAA"]
 		//// - Parent Child Xpath
 		Thread.sleep(2000);
-		System.out.println(Driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT")).getAttribute("value"));
+		System.out.println(
+				Driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT")).getAttribute("value"));
 
 		Driver.close();
 	}

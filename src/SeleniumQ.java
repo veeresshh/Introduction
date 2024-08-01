@@ -19,12 +19,10 @@ public class SeleniumQ {
 
 		Driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		Thread.sleep(3000);
-		
-		// Capture Screeshot		
-		File SRC =((TakesScreenshot)Driver).getScreenshotAs(OutputType.FILE);
+
+		// Capture Screeshot
+		File SRC = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(SRC, new File("C:\\Users\\veereshkumar.s\\Screenshot1.png"));
-
-
 
 	}
 

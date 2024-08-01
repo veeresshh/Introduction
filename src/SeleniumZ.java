@@ -12,17 +12,17 @@ public class SeleniumZ {
 		WebDriver Driver = new ChromeDriver();
 		Driver.manage().window().maximize();
 		Driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		
+
 		Driver.get("https://rahulshettyacademy.com/angularpractice/");
 		Thread.sleep(3000);
-		
-		WebElement Name =Driver.findElement(By.xpath("(//input[@name='name'])[1]"));
-		
+
+		WebElement Name = Driver.findElement(By.xpath("(//input[@name='name'])[1]"));
+
 		// To Find Height and Width of the Element
-		
+
 		System.out.println(Name.getRect().getDimension().getHeight());
 		System.out.println(Name.getRect().getDimension().getWidth());
-		
+
 	}
 
 }
